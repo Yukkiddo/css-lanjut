@@ -1,0 +1,294 @@
+/* ROOT VARIABLES (Berdasarkan Slide 17) */
+:root {
+    --main-color: #3b82f6;
+    --main-color-hover: #2563eb;
+    --dark-color: #1e1e1e;
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --container-width: 1100px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* HEADER (Berdasarkan Slide 18 - 19) */
+.nav-container {
+    background-color: var(--dark-color);
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+.nav-container header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+    margin: 0 auto;
+}
+.search-bar input {
+    width: 250px;
+    height: 35px;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    color: white;
+    padding: 0 1rem;
+    border-radius: 20px;
+    outline: none;
+}
+.search-bar input:focus {
+    border: solid 2px var(--main-color);
+}
+.nav-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.nav-container li a {
+    display: block;
+    color: white;
+    padding: 0 1.1em;
+    text-decoration: none;
+    font-size: 0.85em;
+    height: 60px;
+    line-height: 60px;
+}
+.nav-container li a:hover {
+    color: var(--main-color);
+    transition: all 0.3s;
+    border-bottom: 3px solid var(--main-color);
+}
+
+/* BUTTONS & ANIMASI KLIK */
+.button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em 1.2em;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 30px;
+    line-height: normal !important;
+    height: auto !important;
+    transition: all 0.3s;
+}
+.button:hover {
+    background-color: var(--main-color-hover);
+    color: white;
+}
+.button:active {
+    transform: scale(0.92); /* Efek animasi mengecil ketika diklik */
+}
+
+/* HAMBURGER MENU */
+.nav-container header label, #hamburger {
+    display: none;
+}
+
+/* LAYOUT UTAMA (Menggunakan struktur .blog-container Slide 23) */
+.blog-container {
+    max-width: var(--container-width);
+    margin: 2rem auto;
+    padding: 0 1em;
+}
+.main-layout {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.content-left {
+    width: 68%;
+}
+.content-right {
+    width: 30%;
+    background-color: var(--dark-color);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+/* SECTION HEADER */
+.section-header, .sidebar-header {
+    padding: 0;
+    text-align: left;
+}
+.section-header h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+.sidebar-header h3 {
+    font-size: 1em;
+    background-color: #4a90e2;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 0 1rem 0;
+}
+
+/* 10 TERATAS (FLEX ROW) */
+.top-10-index {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.top-img {
+    width: 19%;
+    border-radius: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.top-img:hover {
+    transform: translateY(-5px); /* Animasi melayang saat hover */
+}
+.top-img:active {
+    transform: scale(0.95); /* Animasi ketika diklik */
+}
+
+/* EPISODE TERBARU (Menggunakan struktur .snippet Slide 24) */
+.blog-index {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.blog-index .snippet {
+    width: 49%;
+    margin-bottom: 1rem;
+    background-color: var(--dark-color);
+    border-radius: 5px;
+    display: flex;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.blog-index .snippet:hover {
+    background-color: #2b2b2b;
+}
+.blog-index .snippet:active {
+    transform: scale(0.96); /* Animasi ketika diklik */
+    border: 1px solid var(--main-color);
+}
+.blog-index .snippet-img {
+    width: 35%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    object-fit: cover;
+}
+.blog-index .snippet-txt {
+    padding: 0.5em 1em;
+    width: 65%;
+}
+.blog-index .snippet-txt h3 {
+    margin: 0 0 5px 0;
+    font-size: 1em;
+    color: white;
+}
+.blog-index .snippet-txt p {
+    margin: 0;
+}
+
+/* TOMBOL FULL GRADIENT BAWAH */
+.btn-full {
+    display: block;
+    text-align: center;
+    background-image: linear-gradient(to right, #4a90e2, #8b5cf6);
+    margin-top: 1rem;
+    padding: 1em;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* SIDEBAR CARD */
+.sidebar-index .snippet {
+    display: flex;
+    margin-bottom: 1rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.sidebar-index .snippet:hover {
+    background-color: #2b2b2b;
+}
+.sidebar-index .snippet:active {
+    transform: scale(0.95);
+}
+.sidebar-index .snippet-img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.sidebar-index .snippet-txt {
+    padding: 0 10px;
+}
+.sidebar-index .snippet-txt h4 {
+    margin: 0 0 5px 0;
+    font-size: 0.9em;
+}
+
+/* BREAKPOINT TABLET (Berdasarkan Slide 19 & 25) */
+@media screen and (max-width: 768px){
+    .nav-container header label {
+        display: inline-block;
+        color: white;
+        font-size: 2rem;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    .nav-container header { width: 100%; padding: 0 1rem;}
+    .search-bar { display: none; } /* Menyembunyikan search di layar kecil agar rapi */
+    
+    .nav-container nav ul {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--dark-color);
+    }
+    .nav-container li a {
+        padding: 0 2em;
+        height: auto;
+        border-bottom: none;
+    }
+    .nav-container nav { display: none; }
+    .nav-container header input:checked ~ nav { display: flex; }
+    
+    /* Layout menumpuk ke bawah untuk tablet */
+    .content-left, .content-right {
+        width: 100%; 
+        margin-bottom: 2rem;
+    }
+    .blog-index .snippet {
+        width: 100%; /* Menjadi 1 kolom di tablet */
+    }
+}
+
+/* BREAKPOINT HANDPHONE (Berdasarkan Slide 25) */
+@media screen and (max-width: 481px){
+    .top-img {
+        width: 48%; /* Gambar top 10 menjadi 2 baris */
+        margin-bottom: 10px;
+    }
+    .blog-index .snippet {
+        flex-direction: column; /* Gambar di atas teks pada hp */
+    }
+    .blog-index .snippet-img {
+        width: 100%;
+        height: 150px;
+        border-radius: 5px 5px 0 0;
+    }
+    .blog-index .snippet-txt {
+        width: 100%;
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samehadaku - Clone</title>
+    <!-- External CSS -->
+    <link href="aset/web.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section (Berdasarkan Slide 18) -->
+    <div class="nav-container">
+        <header>
+            <label for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger"/>
+            <div class="logo">
+                <span style="color: #4a90e2; font-size: 1.5rem; font-style: italic; font-weight: bold;">SAMEHADAKU</span>
+            </div>
+            <!-- Input text berdasarkan elemen state form -->
+            <div class="search-bar">
+                <input type="text" placeholder="Mencari...">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Anime Terbaru</a></li>
+                    <li><a href="#">Daftar Anime</a></li>
+                    <li><a href="#">Kelompok</a></li>
+                    <li><a href="#">Jadwal Rilis</a></li>
+                    <li><a href="#" class="button">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Main Section  -->
+    <div class="blog-container main-layout">
+        
+        <!-- Bagian Kiri (Konten Utama) -->
+        <div class="content-left">
+            <header class="section-header">
+                <h2>10 Teratas Minggu Ini</h2>
+            </header>
+            
+            <!-- Deretan Poster Anime -->
+            <div class="top-10-index">
+                <img src="img/deku.jpg" class="top-img" alt="Anime 1">
+                <img src="img/hxh.jpg" class="top-img" alt="Anime 2">
+                <img src="img/gachiakuta.jpg" class="top-img" alt="Anime 3">
+                <img src="img/jjk.jpg" class="top-img" alt="Anime 4">
+                <img src="img/kimetsu.jpg" class="top-img" alt="Anime 5">
+            </div>
+
+            <header class="section-header" style="margin-top: 2rem;">
+                <h2>Episode Terbaru</h2>
+            </header>
+            
+            <!-- Grid Episode  -->
+            <div class="blog-index">
+                <div class="snippet episode-card">
+                    <img class="snippet-img" src="img/asta.jpg" alt="Thumb">
+                    <div class="snippet-txt">
+                        <h3>Black Clover season 2</h3>
+                        <p><small>Episode 1</small></p>
+                        <p><small style="color: #666;">Dirilis pada: 18 jam yang lalu</small></p>
+                    </div>
+                </div>
+                <div class="snippet episode-card">
+                    <img class="snippet-img" src="img/bleach.jpg" alt="Thumb">
+                    <div class="snippet-txt">
+                        <h3>bleach</h3>
+                        <p><small>Episode banyak dh</small></p>
+                        <p><small style="color: #666;">Dirilis pada: 1 jam yang lalu</small></p>
+                    </div>
+                </div>
+                <div class="snippet episode-card">
+                    <img class="snippet-img" src="img/mikeyjier.jpg" alt="Thumb">
+                    <div class="snippet-txt">
+                        <h3>TokyoRevengers</h3>
+                        <p><small>Episode 1</small></p>
+                        <p><small style="color: #666;">Dirilis pada: barusan</small></p>
+                    </div>
+                </div>
+                <div class="snippet episode-card">
+                    <img class="snippet-img" src="img/wanpis.jpg" alt="Thumb">
+                    <div class="snippet-txt">
+                        <h3>wanpis</h3>
+                        <p><small>Episode 7</small></p>
+                        <p><small style="color: #666;">Dirilis pada: 19 jam yang lalu</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="button btn-full">Klik Di Sini Untuk Update Anime Indo Lainnya</a>
+        </div>
+
+        <!-- Bagian Kanan (Sidebar) -->
+        <div class="content-right">
+            <header class="sidebar-header">
+                <h3>paling banyk di tonton</h3>
+            </header>
+            <div class="sidebar-index">
+                <div class="snippet sidebar-card">
+                    <img class="snippet-img" src="img/naruto.jpg" alt="Movie">
+                    <div class="snippet-txt">
+                        <h4>Naruto</h4>
+                        <p><small>24 April 2026</small></p>
+                    </div>
+                </div>
+                <div class="snippet sidebar-card">
+                    <img class="snippet-img" src="img/aot.jpg" alt="Movie">
+                    <div class="snippet-txt">
+                        <h4>Atack On Titan</h4>
+                        <p><small>15 Februari 2026</small></p>
+                    </div>
+                </div>
+                <div class="snippet sidebar-card">
+                    <img class="snippet-img" src="img/yagami.jpg" alt="Movie">
+                    <div class="snippet-txt">
+                        <h4>Death Note</h4>
+                        <p><small>17 Maret 2025</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
